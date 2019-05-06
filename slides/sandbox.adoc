@@ -8,6 +8,11 @@ imagedir: {imagedir}
 
 slides: {slides}
 
+[NOTE.speaker]
+--
+Speaker notes are only visible to the presenter and do not appear on the slides
+--
+
 [%notitle]
 == Will not show up in presentation
 Slide without title
