@@ -1,4 +1,10 @@
 
+== External links
+
+- https://example.org
+- https://example.org[Example]
+- https://example.org[open Example in new window^]
+
 == Variables
 WARNING: Check why basedir does not resolve
 
