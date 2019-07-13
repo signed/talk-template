@@ -1,7 +1,7 @@
 {
   "name": "contract-tests",
   "version": "1.0.0",
-  "description": "slides for the contract tests talk",
+  "description": "template for my slides",
   "main": "index.js",
   "scripts": {
     "present": "node scripts/scribeV2.js"

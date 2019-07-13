@@ -10,3 +10,8 @@ For hints on how to edit the slides have a look at [asciidoctor-revealjs][adoc-r
 - `S` opens speaker notes  
 - `B` blacks the screen
 - `alt + click` zooms to the cursor location
+
+
+# Todo
+- convert scribe into typescript
+- convert scribe into an npm package
