@@ -4,9 +4,7 @@
   "description": "slides for the contract tests talk",
   "main": "index.js",
   "scripts": {
-    "present": "node scripts/scribeV2.js",
-    "present:old": "yarn scribe && browser-sync start --server --no-online --no-ui --startPath out/presentation.html --watch --files out/presentation.html --watchEvents add",
-    "scribe": "node scripts/scribe.js"
+    "present": "node scripts/scribeV2.js"
   },
   "private": true,
   "dependencies": {
