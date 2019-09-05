@@ -4,7 +4,7 @@
   "description": "template for my slides",
   "main": "index.js",
   "scripts": {
-    "present": "node scripts/scribeV2.js"
+    "present": "node scripts/scribe.js"
   },
   "private": true,
   "dependencies": {

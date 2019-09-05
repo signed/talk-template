@@ -2,7 +2,7 @@
 :linkattrs:
 :slides: .
 :imagedir: ../images
-= The Topic is updated
+= The Topic
 :customcss: ../styles/custom.css
 
 include::{slides}/sandbox.adoc[]
