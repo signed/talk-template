@@ -27,9 +27,14 @@ Slide without title
 image::{imagedir}/bumper.jpg[canvas,size=contain]
 
 [background-color="yellow"]
-== The sandbox
+== Old style background color
 WARNING: This is just a sample
 
+[.red.background]
+== Role based background color
+WARNING: this has to be defined in css
+
+== Source code highlighting
 [source,javascript]
 ----
 const Enum = Object.freeze({

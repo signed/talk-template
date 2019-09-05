@@ -75,17 +75,17 @@ bs.init({
   logFileChanges: true
 });
 
-
 function writePresentation() {
   fs.removeSync(out_dir);
   asciidoctor.convertFile('slides/presentation.adoc', options);
 }
 
 if (watch) {
-  chokidar.watch('slides/*.adoc',).on('all', (event, path) => {
-    writePresentation();
-    bs.reload();
-  });
+  chokidar.watch(['slides/*.adoc', 'styles/*.css', 'images/*'])
+    .on('all', (_event, _path) => {
+      writePresentation();
+      bs.reload();
+    });
 } else {
   writePresentation()
 }
