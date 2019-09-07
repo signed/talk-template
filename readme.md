@@ -16,3 +16,4 @@ There are a bunch of [examples](https://github.com/asciidoctor/asciidoctor-revea
 # Todo
 - convert scribe into typescript
 - convert scribe into an npm package
+- push the rendered presentation to [github pages](https://signed.github.io/talk-template/)
