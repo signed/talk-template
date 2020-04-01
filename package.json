@@ -8,14 +8,14 @@
   },
   "private": true,
   "dependencies": {
-    "asciidoctor-reveal.js": "2.0.0",
+    "asciidoctor-reveal.js": "2.0.1",
     "asciidoctor.js": "1.5.9",
-    "fs-extra": "8.1.0"
+    "fs-extra": "9.0.0"
   },
   "devDependencies": {
-    "@types/node": "12.7.5",
+    "@types/node": "13.9.8",
     "browser-sync": "2.26.7",
-    "chokidar": "3.1.0",
+    "chokidar": "3.3.1",
     "opener": "1.5.1"
   },
   "volta": {
