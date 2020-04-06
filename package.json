@@ -13,7 +13,7 @@
     "fs-extra": "9.0.0"
   },
   "devDependencies": {
-    "@types/node": "13.9.8",
+    "@types/node": "13.11.0",
     "browser-sync": "2.26.7",
     "chokidar": "3.3.1",
     "opener": "1.5.1"
