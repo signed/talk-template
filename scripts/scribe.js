@@ -1,6 +1,6 @@
 const chokidar = require('chokidar');
-const asciidoctor = require('asciidoctor.js')();
-const asciidoctorRevealjs = require('asciidoctor-reveal.js');
+const asciidoctor = require('@asciidoctor/core')();
+const asciidoctorRevealjs = require('@asciidoctor/reveal.js');
 const fs = require('fs-extra');
 const bs = require("browser-sync").create('presentation');
 
