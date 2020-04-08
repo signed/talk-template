@@ -6,10 +6,7 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-[*.js]
-indent_size = 2
-
-[*.json]
+[*.{js,ts,json}]
 indent_size = 2
 
 [*.md]
