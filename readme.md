@@ -17,3 +17,4 @@ There are a bunch of [examples](https://github.com/asciidoctor/asciidoctor-revea
 - convert scribe into typescript
 - push the rendered presentation to [github pages](https://signed.github.io/talk-template/)
 - update copies with copybara
+- have a look at the new `@asciidoctor/cli`
