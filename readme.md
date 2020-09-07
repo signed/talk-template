@@ -15,5 +15,10 @@ There are a bunch of [examples](https://github.com/asciidoctor/asciidoctor-revea
 
 # Todo
 - push the rendered presentation to [github pages](https://signed.github.io/talk-template/)
-- update copies with copybara
 - have a look at the new `@asciidoctor/cli` if it can simplify my setup
+- extract `@signed/scribe` as a library that can be shared across talks.
+
+# Inspiration
+- [source](https://github.com/bentolor/java9to13) / [slides](https://bentolor.github.io/java9to13/)
+- https://gitlab.com/jorge-aguilera/presentation-template
+- https://github.com/melix/gradle-presentation-template
