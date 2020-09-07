@@ -1,7 +1,7 @@
 import type { Asciidoctor } from '@asciidoctor/core';
 import asciidoctorFactory from '@asciidoctor/core';
 import * as chokidar from 'chokidar';
-import fs from 'fs-extra';
+import * as fs from 'fs-extra';
 import { create } from 'browser-sync';
 import * as asciidoctorRevealjs from '@asciidoctor/reveal.js';
 
