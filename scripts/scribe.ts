@@ -5,13 +5,11 @@ import * as fs from 'fs-extra';
 import { create } from 'browser-sync';
 import * as asciidoctorRevealjs from '@asciidoctor/reveal.js';
 
-const watch = !process.argv.includes('--no-watch');
-const base_dir = process.cwd();
-const out_dir = './out';
-
-const asciidoctor = asciidoctorFactory();
-asciidoctorRevealjs.register();
-const bs = create('presentation');
+export interface ScribeOptions {
+  watch: boolean;
+  base_dir: string;
+  out_dir: string;
+}
 
 // Sets additional document attributes, which override equivalently-named
 // attributes defined in the document unless the value ends with @
@@ -47,52 +45,63 @@ enum Theme {
   SOLARIZED = 'solarized'
 }
 
-// https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
-const asciidoctor_reveal_js: Asciidoctor.Attributes = {
-  'revealjsdir': '/node_modules/reveal.js@',
-  'revealjs_history': true,
-  'revealjs_theme': Theme.MOON,
-  'revealjs_transition': Transition.NONE,
-  'revealjs_transitionSpeed': TransitionSpeed.DEFAULT,
-  'source-highlighter': 'highlightjs',
-  'imagedir': '../images'
+const writePresentation = (options: ScribeOptions) => {
+  fs.removeSync(options.out_dir);
+
+  // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
+  const asciidoctor_reveal_js: Asciidoctor.Attributes = {
+    'revealjsdir': '/node_modules/reveal.js@',
+    'revealjs_history': true,
+    'revealjs_theme': Theme.MOON,
+    'revealjs_transition': Transition.NONE,
+    'revealjs_transitionSpeed': TransitionSpeed.DEFAULT,
+    'source-highlighter': 'highlightjs',
+    'imagedir': '../images'
+  };
+
+  // These are the same as for the ruby version
+  // http://asciidoctor.org/docs/user-manual/#ruby-api-options
+  const asciidoctor_options: Asciidoctor.ProcessorOptions = {
+    safe: 'safe',
+    backend: 'revealjs',
+    base_dir: options.base_dir,
+    to_dir: options.out_dir,
+    mkdirs: true,
+    attributes: Object.assign({}, own, asciidoctor_reveal_js)
+  };
+  const asciidoctor = asciidoctorFactory();
+  asciidoctorRevealjs.register();
+  asciidoctor.convertFile('slides/presentation.adoc', asciidoctor_options);
 };
 
-// These are the same as for the ruby version
-// http://asciidoctor.org/docs/user-manual/#ruby-api-options
-const options: Asciidoctor.ProcessorOptions = {
-  safe: 'safe',
-  backend: 'revealjs',
-  base_dir: base_dir,
-  to_dir: out_dir,
-  mkdirs: true,
-  attributes: Object.assign({}, own, asciidoctor_reveal_js)
-};
+export const present = (options: ScribeOptions) => {
+  const browserSync = create('presentation');
+  browserSync.init({
+    server: true,
+    online: false,
+    ui: false,
+    startPath: 'out/presentation.html',
+    watchEvents: ['add'],
+    logFileChanges: true
+  });
 
-bs.init({
-  server: true,
-  online: false,
-  ui: false,
-  startPath: 'out/presentation.html',
-  watchEvents: ['add'],
-  logFileChanges: true
-});
-
-const writePresentation = () => {
-  fs.removeSync(out_dir);
-  asciidoctor.convertFile('slides/presentation.adoc', options);
-};
-
-const present = () => {
-  if (watch) {
+  if (options.watch) {
     chokidar.watch(['slides/*.adoc', 'styles/*.css', 'images/*'])
       .on('all', (_event, _path) => {
-        writePresentation();
-        bs.reload();
+        writePresentation(options);
+        browserSync.reload();
       });
   } else {
-    writePresentation();
+    writePresentation(options);
   }
 };
 
-present();
+const watch = !process.argv.includes('--no-watch');
+const base_dir = process.cwd();
+const out_dir = './out';
+
+present({
+  watch,
+  base_dir,
+  out_dir
+});
