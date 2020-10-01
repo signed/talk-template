@@ -12,11 +12,9 @@ There are a bunch of [examples](https://github.com/asciidoctor/asciidoctor-revea
 - `B` blacks the screen
 - `alt + click` zooms to the cursor location
 
-
 # Todo
 - push the rendered presentation to [github pages](https://signed.github.io/talk-template/)
 - have a look at the new `@asciidoctor/cli` if it can simplify my setup
-- extract `@signed/scribe` as a library that can be shared across talks.
 
 # Inspiration
 - [source](https://github.com/bentolor/java9to13) / [slides](https://bentolor.github.io/java9to13/)
