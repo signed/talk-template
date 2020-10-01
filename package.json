@@ -1,11 +1,11 @@
 {
-  "name": "contract-tests",
+  "name": "@signed/talk-template",
   "version": "1.0.0",
   "description": "template for my slides",
+  "private": true,
   "scripts": {
     "present": "scribe"
   },
-  "private": true,
   "devDependencies": {
     "@signed/scribe": "0.1.0"
   }
