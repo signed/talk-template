@@ -1,3 +1,7 @@
+# The Topic
+
+# About the setup
+
 Run `yarn && yarn present` to build the slides and start the presentation.
 To do a rebuild on change run `yarn scribe:watch` in a second terminal.
 
