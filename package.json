@@ -1,12 +1,14 @@
 {
   "name": "@signed/talk-template",
-  "version": "1.0.0",
+  "packageManager": "pnpm@8.10.5",
   "description": "template for my slides",
   "private": true,
   "scripts": {
     "present": "scribe"
   },
   "devDependencies": {
-    "@signed/scribe": "0.3.0"
+    "@asciidoctor/reveal.js": "5.0.1",
+    "@signed/scribe": "0.3.0",
+    "reveal.js": "4.1.2"
   }
 }
