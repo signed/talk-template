@@ -12,15 +12,18 @@ There are a bunch of [examples](https://github.com/asciidoctor/asciidoctor-revea
 [quick]: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/
 
 # Shortcuts
-- `S` opens speaker notes  
-- `B` blacks the screen
-- `alt + click` zooms to the cursor location
+
+-   `S` opens speaker notes
+-   `B` blacks the screen
+-   `alt + click` zooms to the cursor location
 
 # Todo
-- push the rendered presentation to [github pages](https://signed.github.io/talk-template/)
-- have a look at the new `@asciidoctor/cli` if it can simplify my setup
+
+-   push the rendered presentation to [github pages](https://signed.github.io/talk-template/)
+-   have a look at the new `@asciidoctor/cli` if it can simplify my setup
 
 # Inspiration
-- [source](https://github.com/bentolor/java9to13) / [slides](https://bentolor.github.io/java9to13/)
-- https://gitlab.com/jorge-aguilera/presentation-template
-- https://github.com/melix/gradle-presentation-template
+
+-   [source](https://github.com/bentolor/java9to13) / [slides](https://bentolor.github.io/java9to13/)
+-   https://gitlab.com/jorge-aguilera/presentation-template
+-   https://github.com/melix/gradle-presentation-template
