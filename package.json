@@ -7,8 +7,6 @@
     "present": "scribe"
   },
   "devDependencies": {
-    "@asciidoctor/reveal.js": "5.0.1",
-    "@signed/scribe": "0.3.0",
-    "reveal.js": "4.1.2"
+    "@signed/scribe": "0.5.0"
   }
 }
