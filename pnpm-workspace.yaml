@@ -1,0 +1,5 @@
+# https://pnpm.io/settings#publichoistpattern
+publicHoistPattern:
+    - 'reveal.js'
+minimumReleaseAgeExclude:
+    - '@signed/scribe@0.9.0'
